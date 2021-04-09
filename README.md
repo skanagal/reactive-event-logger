@@ -69,6 +69,7 @@ Apr  9 08:54:08 pe1-ghb265 event-logger.py: custom log - CAPACITY-1-UTILIZATION_
 
 Now crafting a syslog message to trigger the event-handler `stop-logger`. As you can see daemon eventlogger is terminated successfully.
 
+```
 Apr  9 08:56:09 pe1-ghb265 event-logger.py: custom log - CAPACITY-1-UTILIZATION_HIGH
 Apr  9 08:56:15 pe1-ghb265 ConfigAgent: %SYS-6-LOGMSG_INFO: Message from admin on vty3 (10.95.69.90): %CAPACITY-1-UTILIZATION_NORMAL: AegisPrefix-Resource4-Fap0.0 table utilization is back to normal
 Apr  9 08:56:15 pe1-ghb265 EventMgr: %SYS-6-EVENT_TRIGGERED: Event handler stop-logging-daemon was activated
@@ -80,3 +81,4 @@ Apr  9 08:56:15 pe1-ghb265 ProcMgr-worker: %PROCMGR-6-WORKER_WARMSTART: ProcMgr 
 Apr  9 08:56:15 pe1-ghb265 ProcMgr-worker: %PROCMGR-6-TERMINATE_RUNNING_PROCESS: Terminating deconfigured/reconfigured process 'eventlogger' (PID=21554)
 Apr  9 08:56:15 pe1-ghb265 ProcMgr-worker: %PROCMGR-7-WORKER_WARMSTART_DONE: ProcMgr worker warm start done. (PID=2203)
 Apr  9 08:56:16 pe1-ghb265 ProcMgr-worker: %PROCMGR-6-PROCESS_TERMINATED: 'eventlogger' (PID=21554, status=9) has terminated.
+```
