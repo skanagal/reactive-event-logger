@@ -1,7 +1,7 @@
 # Use-Case
 
 The script `event-logger.py` generates syslog every 30 seconds. The workflow is:
-1. Daemon "eventlogger" below executes the python script `event-logger.py`. It is shutdown by default. Do not unshut it yet.
+1. Daemon `eventlogger` below executes the python script `event-logger.py`. It is shutdown by default. Do not unshut it yet.
 2. Event-handler `start-logger` will unshut the daemon when syslog with regex `%CAPACITY-1-UTILIZATION_HIGH: AegisPrefix-Resource` is generated. The daemon will keep running in the background.
 3. Event-handler `stop-logger` will shutdown the daemon when syslog with regex `%CAPACITY-1-UTILIZATION_NORMAL: AegisPrefix-Resource` is generated. The daemon will quit immediately.
 
@@ -45,7 +45,7 @@ pe1-ghb265(config)#
 ```
 
 
-Crafting a syslog message to trigger the event-handler `start-logger`. As you can see the message "custom log - CAPACITY-1-UTILIZATION_HIGH" is being logged every 30 seconds.
+Crafting a syslog message to trigger the event-handler `start-logger`. As you can see the message `custom log - CAPACITY-1-UTILIZATION_HIGH` is being logged every 30 seconds.
 
 ```pe1-ghb265#  send log message %CAPACITY-1-UTILIZATION_HIGH: AegisPrefix-Resource4-Fap0.0 table utilization is currently at 66%, crossed threshold 50%```
 
